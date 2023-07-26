@@ -1,8 +1,8 @@
-// eslint-disable-next-line no-unused-vars
-import { createUser, uploadPhoto } from './utils.js';
+// eslint-disable-next-line no-unused-vars, import/no-unresolved, import/extensions
+import { createUser, uploadPhoto } from './utils';
 
 export default function handleProfileSignup() {
-  Promise.all([createUser(), uploadPhoto()]).then((results) => {
+  return Promise.all([createUser(), uploadPhoto()]).then((results) => {
     const [userResult, photoResult] = results;
     console.log(`${photoResult.body} ${userResult.firstname} ${userResult.lastname}`);
     // eslint-disable-next-line no-unused-vars
