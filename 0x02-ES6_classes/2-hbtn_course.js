@@ -20,20 +20,20 @@ export default class HolbertonCourse {
   }
 
   get length() {
-    return this._name;
+    return this.length;
   }
 
   set length(value) {
     if (typeof value !== 'number') throw TypeError('Length must be number');
-    this._name = value;
+    this.length = value;
   }
 
   get students() {
-    return this._name;
+    return this._students;
   }
 
   set students(value) {
     if (Array.isArray(value) !== true) throw TypeError('Students must be array');
-    this._name = value;
+    this.students = value;
   }
 }
